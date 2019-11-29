@@ -1,12 +1,10 @@
 import tkinter as tk
 import cv2
-import numpy as np
 from tkinter import filedialog
 from PIL import Image
 from pylab import *
 from matplotlib.font_manager import FontProperties
 from scipy.ndimage import filters
-
 
 def getfile():
     root = tk.Tk()
@@ -69,8 +67,6 @@ def getmo():
     show()
 
 def getpoint():
-    import cv2
-
     img = cv2.imread(getfile())
     img = cv2.resize(img, (136 * 3, 76 * 3))
     cv2.imshow("original", img)

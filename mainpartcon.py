@@ -41,14 +41,6 @@ def pca(data,k):
     # 有时会出现复数特征值，导致无法继续计算，这里用了不同的图像，有时候会出现复数特征，但是经过
 
     eig_val,eig_vec = np.linalg.eig(matrix_)
-   # print(matrix_.shape)
-   #  print(eig_val)
-    # 第一种求前k个向量
-   #  eig_pairs = [(np.abs(eig_val[i]),eig_vec[:,i]) for i in range(n_features)]
-   #  eig_pairs.sort(reverse=True)
-   #  feature = np.array([ele[1] for ele in eig_pairs[:k]])
-   #  new_data = np.dot(normal_data,np.transpose(feature))
-    # 第二种求前k个向量
     eigIndex = np.argsort(eig_val)
     eigVecIndex = eigIndex[:-(k+1):-1]
     feature = eig_vec[:,eigVecIndex]

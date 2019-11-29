@@ -96,8 +96,7 @@ def walk():
     box = findcnts_and_box_point(closed)
     draw_img, crop_img = drawcnts_and_cut(original_img, box)
 
-    # 暴力一点，把它们都显示出来看看
-
+    # 中间过程全部显示
     #cv2.imshow('original_img', original_img)
     #cv2.imshow('blurred', blurred)
     #cv2.imshow('gradX', gradX)
