@@ -1,10 +1,3 @@
-'''
-    功能：
-        利用训练好的模型，进行实时手写体识别
-    作者：yuhansgg
-    博客: https://blog.csdn.net/u011389706
-    日期: 2018/08/06
-'''
 import tensorflow as tf
 from PyQt5.QtWidgets import (QWidget, QPushButton, QLabel)
 from PyQt5.QtGui import (QPainter, QPen, QFont)
