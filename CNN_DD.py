@@ -74,6 +74,6 @@ class ConvModel(object):
             print('测试  正确率: ', np.mean(np.array(Accuracy)))
 
 
-model = ConvModel(0.001, 64, 2000)  # 学习率为0.001，每批传入64张图，训练2000次
+model = ConvModel(0.001, 64, 10000)  # 学习率为0.001，每批传入64张图，训练2000次
 model.train()  # 训练模型
 model.test()  # 预测
