@@ -1,9 +1,7 @@
 import numpy as np
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-import os
 
-import matplotlib.pyplot as plt
 
 mnist = input_data.read_data_sets('MNIST_data', one_hot=True)
 
@@ -73,7 +71,7 @@ class ConvModel(object):
                                          feed_dict={self.X_flat: test_x, self.y: test_y, self.dropRate: 1.})
                 Accuracy.append(test_accuracy)
             print('==' * 15)
-            print('Test Accuracy: ', np.mean(np.array(Accuracy)))
+            print('测试  正确率: ', np.mean(np.array(Accuracy)))
 
 
 model = ConvModel(0.001, 64, 2000)  # 学习率为0.001，每批传入64张图，训练2000次
